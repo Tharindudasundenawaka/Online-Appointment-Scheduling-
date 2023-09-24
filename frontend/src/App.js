@@ -1,27 +1,31 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AppointmentForm from "./Components/AppointmentForm";
-import ConsultantList from "./Components/ConsultantList";
-import JobSeekerList from "./Components/JobSeekerList";
-import ReportList from "./Components/ReportList";
-import UserProfile from "./Components/UserProfile";
-import Login from "./Components/Login";
-import Signup from "./Components/Signup";
-import GlobalStyle from "./Components/GlobalStyle ";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashbord from "./pages/Dashbord";
+import DashbordConsulter from "./pages/DashbordConsulter";
+import DashbordAdmin from "./pages/DashbordAdmin";
+import Profile from "./pages/Profile";
+import Myappointment from "./pages/MyAppointments";
+import Home from "./pages/Home";
+import Reports from "./pages/Reports";
+import DeleteUsers from "./pages/DeleteUsers";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <GlobalStyle />
         <Routes>
-          <Route path="/" exact element={<Login />} />
-          <Route path="/appoinmentadd" exact element={<AppointmentForm />} />
-          <Route path="/consultants" element={<ConsultantList />} />
-          <Route path="/profile/:userId" element={<UserProfile />} />
-          <Route path="/jobseekers" element={<JobSeekerList />} />
-          <Route path="/reports" element={<ReportList />} />
+          <Route path="/" exact element={<Home/>} />
+          <Route path="/login" exact element={<Login/>} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/dashbord" element={<Dashbord />} />
+          <Route path="/dashbordConsulter" element={<DashbordConsulter />} />
+          <Route path="/dashbordAdmin" element={<DashbordAdmin />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/myappointment" element={<Myappointment />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/deleteUsers" element={<DeleteUsers />} />
         </Routes>
       </div>
     </BrowserRouter>

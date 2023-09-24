@@ -1,0 +1,34 @@
+.jobscard{
+    margin-top: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.job-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
+  }
+  
+  
+  .job-card {
+    width: 100%;
+  }
+  
+
+
+  
+.job-card {
+  width: 300px;
+}
+
+.job-card img {
+  width: 100%; 
+  height: auto; 
+}
+
+.add-appointment-label {
+  font-size: 16px; 
+}

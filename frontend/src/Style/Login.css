@@ -1,0 +1,83 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../images/logi.jpg") no-repeat;
+  /* background: url("../images/logi.jpg") no-repeat center center fixed; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.wrapperlogin {
+  width: 500px;
+  border-radius: 20px;
+  background: rgb(20, 110, 138);
+  color: white;
+  padding: 30px 40px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+}
+
+.formlogin {
+  /* background-color: #f5eeee; */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: black;
+}
+
+.input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttonLogin {
+  background-color: #e2caca;
+    color: #090909;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 150px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 60px;
+    width: 75%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.buttonLogin:hover{
+  color: #060f18;
+  font-weight: 600;
+  background-color: #c49c9c;
+}
+
+.instructlogin {
+  margin-left: 20px;
+  color: #0e0d0d;
+  margin-top: 10px;
+}
+
+.instructlogin a {
+  color: #074597;
+  text-decoration: dotted;
+  font-weight: 800;
+}
+
+.loginlogo {
+  max-width: 200px; 
+  margin-bottom: 20px; 
+  margin-left: 80px;
+}

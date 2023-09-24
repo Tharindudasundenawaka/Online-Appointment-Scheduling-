@@ -1,0 +1,287 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  /* padding: 1rem; */
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 0px;
+}
+
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+}
+
+.navbar-toggle:hover {
+  border: #005fa3;
+}
+
+.navbar-toggle-icon {
+  margin-top: 15px;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #d6c1c1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #d6c1c1;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon::before {
+  top: -8px;
+}
+
+.navbar-toggle-icon::after {
+  top: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+  /* font-family: 'Libre Baskerville', serif; */
+  font-family: "Sono", sans-serif;
+  font-size: 15px;
+}
+
+.navbar-links li a {
+  display: block;
+  color: #ffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #e84c3d;
+}
+
+
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 65%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 70%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #ccc;
+  border: 1px solid #cabfb8;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.search-results::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.search-results li {
+  font-family: "Libre Baskerville", serif;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-weight: 500;
+}
+
+.search-results li:hover {
+  background-color: #9b2d95;
+  color: #070707;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-search {
+    margin-left: 0;
+    margin-top: 16px;
+    justify-content: center;
+  }
+
+  .navbar-search-input {
+    width: 70%;
+  }
+  .search-results {
+    left: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 0;
+  }
+}
+
+
+/* ________________________________________________________ */
+
+
+.ui.segment {
+  border: none;
+  box-shadow: none;
+  margin-top: 65px;
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.ui.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 80px; */
+}
+
+.ui.massive.icon.input {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ui.massive.icon.input input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Adjust the padding to make the search bar smaller */
+  border-radius: 25px; /* Adjust the border-radius to make it less rounded */
+  font-size: 16px; /* Adjust the font size to make it smaller */
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+.ui.massive.icon.input .search {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.ui.massive.icon.input input:focus + .search {
+  color: #000;
+}
+
+
+/* ______________________________________ */
+
+/* SearchBar.css */
+
+.search-bar-container {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+/* Customize the appearance of the Input component if needed */
+.ant-input {
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.ant-input-affix-wrapper{
+  background-color: #ffffff;
+}
+
+/* Customize the appearance of the search button if needed */
+.ant-btn-lg {
+  border-radius: 25px;
+}
+.anticon svg {
+  font-size: 21px;
+  color: #000000;
+}
+
+
+.headtopic{
+  color: #ccc;
+}
