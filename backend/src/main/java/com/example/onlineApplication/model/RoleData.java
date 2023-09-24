@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 public class RoleData {
 	@Id
 	private int id;
+
 	private String name;
 
 	public RoleData(int id, String name) {

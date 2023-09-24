@@ -12,23 +12,20 @@ public class JobseekerData {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String phoneNumber;
-	private String countryOfInterest;
 
-	public JobseekerData(int id, String firstName, String lastName, String email, String phoneNumber,
-			String countryOfInterest) {
+	private String username;
+	private String userType;
+	private String password;
+	private String phoneNumber;
+
+	public JobseekerData(int id, String username, String userType, String password, String phoneNumber) {
 		super();
 		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
+		this.username = username;
+		this.userType = userType;
+		this.password = password;
 		this.phoneNumber = phoneNumber;
-		this.countryOfInterest = countryOfInterest;
 	}
-
 	public JobseekerData() {
 		super();
 	}
@@ -37,44 +34,36 @@ public class JobseekerData {
 		return id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getUserType() {
+		return userType;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getCountryOfInterest() {
-		return countryOfInterest;
-	}
 
-	public void setCountryOfInterest(String countryOfInterest) {
-		this.countryOfInterest = countryOfInterest;
-	}
 
 }

@@ -9,59 +9,60 @@ import jakarta.persistence.Id;
 public class ConsultantData {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 
-	private String name;
-	private String specialization;
-	private String country;
-	private String availability;
+	private String username;
+	private String userType;
+	private String password;
+	private String phoneNumber;
 
-	public ConsultantData(String name, String specialization, String country, String availability) {
+	public ConsultantData(int id, String username, String userType, String password, String phoneNumber) {
 		super();
-		this.name = name;
-		this.specialization = specialization;
-		this.country = country;
-		this.availability = availability;
+		this.id = id;
+		this.username = username;
+		this.userType = userType;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
 	}
-
 	public ConsultantData() {
 		super();
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getSpecialization() {
-		return specialization;
+	public String getUserType() {
+		return userType;
 	}
 
-	public void setSpecialization(String specialization) {
-		this.specialization = specialization;
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 
-	public String getCountry() {
-		return country;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getAvailability() {
-		return availability;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setAvailability(String availability) {
-		this.availability = availability;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
+
 
 }

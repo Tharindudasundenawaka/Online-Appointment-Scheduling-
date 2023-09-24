@@ -34,10 +34,10 @@ public class ConsultantService {
 		if (existingConsultantOptional.isPresent()) {
 			ConsultantData existingConsultant = existingConsultantOptional.get();
 
-			existingConsultant.setName(updatedConsultant.getName());
-			existingConsultant.setSpecialization(updatedConsultant.getSpecialization());
-			existingConsultant.setCountry(updatedConsultant.getCountry());
-			existingConsultant.setAvailability(updatedConsultant.getAvailability());
+			existingConsultant.setUsername(updatedConsultant.getUsername());
+			existingConsultant.setUserType(updatedConsultant.getUserType());
+			existingConsultant.setPassword(updatedConsultant.getPassword());
+			existingConsultant.setPhoneNumber(updatedConsultant.getPhoneNumber());
 
 			return consultantRepository.save(existingConsultant);
 		} else {

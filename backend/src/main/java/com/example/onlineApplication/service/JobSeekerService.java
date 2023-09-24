@@ -34,8 +34,10 @@ public class JobSeekerService {
 		if (existingJobSeekerOptional.isPresent()) {
 			JobseekerData existingJobSeeker = existingJobSeekerOptional.get();
 
-			existingJobSeeker.setFirstName(updatedJobSeeker.getFirstName());
-			existingJobSeeker.setEmail(updatedJobSeeker.getEmail());
+			existingJobSeeker.setPhoneNumber(updatedJobSeeker.getPhoneNumber());
+			existingJobSeeker.setUsername(updatedJobSeeker.getUsername());
+			existingJobSeeker.setUserType(updatedJobSeeker.getUserType());
+			existingJobSeeker.setPassword(updatedJobSeeker.getPassword());
 			existingJobSeeker.setPhoneNumber(updatedJobSeeker.getPhoneNumber());
 
 

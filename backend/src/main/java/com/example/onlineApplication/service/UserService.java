@@ -35,8 +35,9 @@ public class UserService {
 			UserData existingUser = existingUserOptional.get();
 
 			existingUser.setUsername(updatedUser.getUsername());
-			existingUser.setEmail(updatedUser.getEmail());
+			existingUser.setUserType(updatedUser.getUserType());
 			existingUser.setPassword(updatedUser.getPassword());
+			existingUser.setPhoneNumber(updatedUser.getPhoneNumber());
 
 			return userRepository.save(existingUser);
 		} else {

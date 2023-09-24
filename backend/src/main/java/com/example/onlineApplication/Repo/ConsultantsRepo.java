@@ -7,5 +7,7 @@ import com.example.onlineApplication.model.ConsultantData;
 
 @Repository
 public interface ConsultantsRepo extends JpaRepository<ConsultantData, Integer> {
-
+	ConsultantData save(String user);
 }
+
+
